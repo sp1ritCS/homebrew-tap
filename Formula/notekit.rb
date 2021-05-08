@@ -9,7 +9,7 @@ class Notekit < Formula
   depends_on "pkg-config" => :build
 
   depends_on "adwaita-icon-theme"
-  depends_on "clatexmath"
+  depends_on "sp1ritCS/tap/clatexmath"
   depends_on "fontconfig"
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
