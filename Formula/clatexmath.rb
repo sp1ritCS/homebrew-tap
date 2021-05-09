@@ -7,6 +7,13 @@ class Clatexmath < Formula
   license "MIT"
   head "https://github.com/NanoMichael/cLaTeXMath.git"
 
+  bottle do
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/clatexmath-0.0.3"
+    rebuild 1
+    sha256 cellar: :any,                 catalina:     "e0ed18c244217338534d5698ac48bac2cd24c80692816020c37e59399608bcc5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2ce79789dcb883cc7a384d45dfef2597a3fb015c1603b0d7f411bf8f69fd4554"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
