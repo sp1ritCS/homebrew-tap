@@ -12,7 +12,7 @@ class Notekit < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-
+  
   depends_on "adwaita-icon-theme"
   depends_on "fontconfig"
   depends_on "gtkmm3"
