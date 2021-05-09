@@ -1,27 +1,33 @@
 class Notekit < Formula
-  desc "A GTK3 hierarchical markdown notetaking application with tablet support"
+  commit = "c1ea2fc6ec8f6b1bb1b4247c4d126d7ebe09e15a"
+
+  desc "GTK3 hierarchical markdown notetaking application with tablet support"
   homepage "https://github.com/blackhole89/notekit/"
+  url "https://github.com/blackhole89/notekit.git",
+    revision: commit
+  version "0.0.1-20210508"
   license "GPL-3.0-or-later"
-  head "https://github.com/sp1ritCS/notekit.git", branch: "osx"
+  head "https://github.com/blackhole89/notekit.git"
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
   depends_on "adwaita-icon-theme"
-  depends_on "sp1ritCS/tap/clatexmath"
   depends_on "fontconfig"
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
   depends_on "hicolor-icon-theme"
   depends_on "jsoncpp"
   depends_on "librsvg"
+  depends_on "sp1ritCS/tap/clatexmath"
   depends_on "zlib"
 
-  # required to build notekit with LLVM clang
   patch do
-    url "https://raw.githubusercontent.com/sp1ritCS/notekit/osx/Apple/llvm.patch"
-    sha256 "f38e93a6df315b6a4ff72198c43f5656ffee2435f5d61f6097ffde5223cdc582"
+    url "https://github.com/blackhole89/notekit.git", revision: commit
+    apply %w[
+      Apple/llvm.patch
+    ]
   end
 
   def install
