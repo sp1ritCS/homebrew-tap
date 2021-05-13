@@ -2,7 +2,7 @@ class Clatexmath < Formula
   desc "Dynamic, cross-platform, and embeddable LaTeX rendering library"
   homepage "https://github.com/NanoMichael/cLaTeXMath/"
   url "https://github.com/NanoMichael/cLaTeXMath.git",
-    revision: "580809b4c5177fa59a8a645987bbba105361b4a2"
+    revision: "52329bbd9d3c21cb92277b7282292e3eeb4c88f5"
   version "0.0.3"
   license "MIT"
   head "https://github.com/NanoMichael/cLaTeXMath.git"
@@ -18,6 +18,7 @@ class Clatexmath < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "tinyxml2"
   depends_on "fontconfig"
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
