@@ -9,9 +9,9 @@ class Clatexmath < Formula
 
   bottle do
     root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/clatexmath-0.0.3"
-    rebuild 1
-    sha256 cellar: :any,                 catalina:     "e0ed18c244217338534d5698ac48bac2cd24c80692816020c37e59399608bcc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2ce79789dcb883cc7a384d45dfef2597a3fb015c1603b0d7f411bf8f69fd4554"
+    rebuild 2
+    sha256 cellar: :any, catalina:     "b5c840f84755d8f472a639d8966e52204288ba583f253292b3c670f25684c0bd"
+    sha256               x86_64_linux: "462c58a43607d545cf5d5f7f913b810b84b0acd297f80e6b3e070f2a95f45fe8"
   end
 
   depends_on "meson" => :build
