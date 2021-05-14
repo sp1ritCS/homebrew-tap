@@ -1,11 +1,11 @@
 class Notekit < Formula
-  commit = "c1ea2fc6ec8f6b1bb1b4247c4d126d7ebe09e15a"
+  commit = "845a7cb3f508a4e8d3b69b196536e9be9b5a98e8"
 
   desc "GTK3 hierarchical markdown notetaking application with tablet support"
   homepage "https://github.com/blackhole89/notekit/"
   url "https://github.com/blackhole89/notekit.git",
     revision: commit
-  version "0.0.1-20210508"
+  version "0.0.1-20210513"
   license "GPL-3.0-or-later"
   head "https://github.com/blackhole89/notekit.git"
 
