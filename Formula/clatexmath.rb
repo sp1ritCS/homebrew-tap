@@ -18,10 +18,10 @@ class Clatexmath < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "tinyxml2"
   depends_on "fontconfig"
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
+  depends_on "tinyxml2"
 
   def install
     mkdir "_build" do
