@@ -46,8 +46,8 @@ class Notekit < Formula
   end
 
   test do
-    system "#{bin}/notekit", "--help"
     on_macos do
+      system "#{bin}/notekit", "--help"
       assert_predicate prefix/"NoteKit.app", :exist?
     end
   end
