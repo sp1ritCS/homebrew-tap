@@ -9,6 +9,12 @@ class Notekit < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/blackhole89/notekit.git"
 
+  bottle do
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/notekit-0.0.1-20210513"
+    sha256 cellar: :any, catalina:     "3c09b0f41e444dc192791070bec91efd6c46ba82898f273014d44a8f58ac9849"
+    sha256               x86_64_linux: "c43f48ee5d787f9c98fc905e44a5ed29c2166ca92bf64fa9c079378e03606802"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
