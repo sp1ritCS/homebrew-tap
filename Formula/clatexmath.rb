@@ -2,8 +2,8 @@ class Clatexmath < Formula
   desc "Dynamic, cross-platform, and embeddable LaTeX rendering library"
   homepage "https://github.com/NanoMichael/cLaTeXMath/"
   url "https://github.com/NanoMichael/cLaTeXMath.git",
-    revision: "52329bbd9d3c21cb92277b7282292e3eeb4c88f5"
-  version "0.0.3"
+    revision: "dc32540664276a00805b21a0fb5cd6418bacdb54"
+  version "0.0.4"
   license "MIT"
   head "https://github.com/NanoMichael/cLaTeXMath.git"
 
