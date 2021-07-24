@@ -8,10 +8,9 @@ class Clatexmath < Formula
   head "https://github.com/NanoMichael/cLaTeXMath.git"
 
   bottle do
-    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/clatexmath-0.0.3"
-    rebuild 2
-    sha256 cellar: :any, catalina:     "b5c840f84755d8f472a639d8966e52204288ba583f253292b3c670f25684c0bd"
-    sha256               x86_64_linux: "462c58a43607d545cf5d5f7f913b810b84b0acd297f80e6b3e070f2a95f45fe8"
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/clatexmath-0.0.4"
+    sha256 cellar: :any, catalina:     "d45e7742ba5f00d14b91be3f4b57c3a6767e56f792e8826bab081c4444668905"
+    sha256               x86_64_linux: "9cf4d4efb3ee33dc597eced1a0477483ea4adbc709ba4f7f83f810a8fd273f77"
   end
 
   depends_on "meson" => :build
