@@ -33,11 +33,8 @@ class Clatexmath < Formula
   test do
     assert_predicate pkgshare/".clatexmath-res_root", :exist?
     assert_predicate lib/"pkgconfig/clatexmath.pc", :exist?
-    on_macos do
-      assert_predicate lib/"libclatexmath.dylib", :exist?
-    end
-    on_linux do
-      assert_predicate lib/"libclatexmath.so", :exist?
-    end
+    assert_predicate lib/"libclatexmath.dylib", :exist? if OS.mac?
+    assert_predicate lib/"libclatexmath.so", :exist? if OS.linux?
   end
 end
+

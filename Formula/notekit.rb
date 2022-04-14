@@ -43,7 +43,7 @@ class Notekit < Formula
       system "ninja", "install", "-v"
     end
 
-    on_macos do
+    if OS.mac?
       prefix.install "Apple/NoteKit.app"
       bundle_path = prefix.join("NoteKit.app/Contents/MacOS/")
       bundle_path.write_exec_script "#{bin}/notekit"
@@ -52,9 +52,10 @@ class Notekit < Formula
   end
 
   test do
-    on_macos do
+    if OS.mac?
       system "#{bin}/notekit", "--help"
       assert_predicate prefix/"NoteKit.app", :exist?
     end
   end
 end
+
