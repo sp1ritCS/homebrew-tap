@@ -8,6 +8,12 @@ class Microtex < Formula
   head "https://github.com/NanoMichael/MicroTeX.git",
     branch: "openmath"
 
+  bottle do
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/microtex-1.0.0"
+    sha256 cellar: :any, big_sur:      "5a4bce19ca487d1270c825777ea7e483f5fc8cd77d7bcc658416a39e7ee8321e"
+    sha256               x86_64_linux: "aa8367f80480d50c0a1435a3f6b08f4ad96e971db1f93a68e28f597fd45d497b"
+  end
+
   depends_on "fontforge" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
