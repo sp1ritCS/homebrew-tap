@@ -7,12 +7,6 @@ class Clatexmath < Formula
   license "MIT"
   head "https://github.com/NanoMichael/cLaTeXMath.git"
 
-  bottle do
-    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/clatexmath-0.0.4"
-    sha256 cellar: :any, catalina:     "d45e7742ba5f00d14b91be3f4b57c3a6767e56f792e8826bab081c4444668905"
-    sha256               x86_64_linux: "9cf4d4efb3ee33dc597eced1a0477483ea4adbc709ba4f7f83f810a8fd273f77"
-  end
-
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
@@ -37,4 +31,3 @@ class Clatexmath < Formula
     assert_predicate lib/"libclatexmath.so", :exist? if OS.linux?
   end
 end
-
