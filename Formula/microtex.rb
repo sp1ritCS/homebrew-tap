@@ -1,4 +1,6 @@
 class Microtex < Formula
+  include Language::Python::Shebang
+
   desc "Dynamic, cross-platform, and embeddable LaTeX rendering library"
   homepage "https://github.com/NanoMichael/MicroTeX/"
   url "https://github.com/NanoMichael/cLaTeXMath.git",
@@ -14,16 +16,17 @@ class Microtex < Formula
     sha256               x86_64_linux: "aa8367f80480d50c0a1435a3f6b08f4ad96e971db1f93a68e28f597fd45d497b"
   end
 
-  depends_on "fontforge" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
   depends_on "cairo"
   depends_on "fontconfig"
+  depends_on "fontforge"
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
   depends_on "pango"
+  depends_on "python"
   depends_on "qt@5"
 
   resource "lm-math" do
@@ -40,6 +43,12 @@ class Microtex < Formula
     chdir "prebuilt" do
       resource("lm-math").stage { pkgshare.install Dir["*"].first => "latinmodern-math.otf" }
       system "./otf2clm.sh", "--single", pkgshare/"latinmodern-math.otf", "true", pkgshare
+
+      rewrite_shebang detected_python_shebang, "otf2clm.py"
+      inreplace "otf2clm.sh", /otf2clm\.py/, libexec/"microtex-otf2clm.py"
+
+      libexec.install "otf2clm.py" => "microtex-otf2clm.py"
+      bin.install "otf2clm.sh" => "microtex-otf2clm"
     end
   end
 
