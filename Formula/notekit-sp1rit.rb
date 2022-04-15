@@ -10,6 +10,11 @@ class NotekitSp1rit < Formula
   head "https://github.com/sp1ritCS/notekit.git",
     branch: "unimath"
 
+  bottle do
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/notekit-sp1rit-0.0.1-20220415"
+    sha256 x86_64_linux: "2c42656b0fb2e96d4f3895a874761de80d66fd112f8e1cf45f522938189238ff"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
