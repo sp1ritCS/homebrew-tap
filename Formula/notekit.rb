@@ -23,6 +23,8 @@ class Notekit < Formula
   depends_on "sp1ritCS/tap/clatexmath"
   depends_on "zlib"
 
+  conflicts_with "notekit-sp1rit", because: "notekit-sp1rit is a fork of notekit that shares the name of the binary"
+
   patch do
     url "https://github.com/blackhole89/notekit.git", revision: commit
     apply %w[

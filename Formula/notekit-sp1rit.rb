@@ -31,6 +31,8 @@ class NotekitSp1rit < Formula
   depends_on "sp1ritCS/tap/microtex"
   depends_on "zlib"
 
+  conflicts_with "notekit", because: "this is a fork of notekit that installs the same files"
+
   # from https://github.com/blackhole89/notekit/pull/121
   patch :p1, :DATA
 
