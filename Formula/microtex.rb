@@ -12,8 +12,9 @@ class Microtex < Formula
 
   bottle do
     root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/microtex-1.0.0"
-    sha256 cellar: :any, big_sur:      "5a4bce19ca487d1270c825777ea7e483f5fc8cd77d7bcc658416a39e7ee8321e"
-    sha256               x86_64_linux: "aa8367f80480d50c0a1435a3f6b08f4ad96e971db1f93a68e28f597fd45d497b"
+    rebuild 1
+    sha256 cellar: :any, big_sur:      "3fb67776790d5b21f66730587acdb6107d0994a790f60c865f7c4017a96feca8"
+    sha256               x86_64_linux: "446a361fdbf2626a3ed786df2ce9d63430ea1273600a1ec1942f995950efd8bb"
   end
 
   depends_on "meson" => :build
