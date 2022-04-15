@@ -26,7 +26,6 @@ class NotekitSp1rit < Formula
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
   depends_on "hicolor-icon-theme"
-  depends_on "jsoncpp"
   depends_on "librsvg"
   depends_on "sp1ritCS/tap/microtex"
   depends_on "zlib"
@@ -43,10 +42,11 @@ class NotekitSp1rit < Formula
       system "ninja", "install", "-v"
     end
 
-    microtex = Formula["microtex"]
-    system "#{microtex.bin}/microtex-otf2clm", "--batch", share/"notekit/data/fonts/", "true", microtex.pkgshare
+    microtex_pkgshare = share/"microtex"
+    system "#{Formula["microtex"].bin}/microtex-otf2clm", "--batch",
+      share/"notekit/data/fonts/", "true", microtex_pkgshare
     Dir[share/"notekit/data/fonts/*.otf"].each do |font|
-      microtex.pkgshare.install_symlink font
+      microtex_pkgshare.install_symlink font
     end
 
     if OS.mac?
@@ -63,7 +63,7 @@ class NotekitSp1rit < Formula
   end
 
   test do
-    system "#{bin}/notekit", "--help"
+    system "#{bin}/notekit", "--help" if ENV["DISPLAY"] || ENV["WAYLAND_DISPLAY"]
     assert_predicate prefix/"NoteKit.app", :exist? if OS.mac?
   end
 end
