@@ -12,7 +12,9 @@ class NotekitSp1rit < Formula
 
   bottle do
     root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/notekit-sp1rit-0.0.1-20220415"
-    sha256 x86_64_linux: "2c42656b0fb2e96d4f3895a874761de80d66fd112f8e1cf45f522938189238ff"
+    rebuild 1
+    sha256 cellar: :any, big_sur:      "048f904bca0f8bea8e1d17632855a102a56a65edff800d113510c1178ed133a4"
+    sha256               x86_64_linux: "a9ca3513cd972a55ea80689632e3b048735b685c58ee99792abf569e570ab975"
   end
 
   depends_on "meson" => :build
