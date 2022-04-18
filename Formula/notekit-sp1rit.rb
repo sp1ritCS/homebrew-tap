@@ -1,11 +1,11 @@
 class NotekitSp1rit < Formula
-  commit = "f7b6e98e2e4a6320793ec21189a10d2bbd003bf5"
+  commit = "5c9722e56898e3e00c18c7e919b3e6d44866b2c6"
 
   desc "GTK3 hierarchical markdown notetaking application with tablet support"
   homepage "https://github.com/blackhole89/notekit/"
   url "https://github.com/sp1ritCS/notekit.git",
     revision: commit
-  version "0.0.1-20220415"
+  version "0.0.1-20220418"
   license "GPL-3.0-or-later"
   head "https://github.com/sp1ritCS/notekit.git",
     branch: "unimath"
@@ -34,7 +34,6 @@ class NotekitSp1rit < Formula
 
   conflicts_with "notekit", because: "this is a fork of notekit that installs the same files"
 
-  # from https://github.com/blackhole89/notekit/pull/121
   patch :p1, :DATA
 
   def install
@@ -70,17 +69,6 @@ class NotekitSp1rit < Formula
   end
 end
 __END__
-diff --git a/mainwindow.cpp b/mainwindow.cpp
-index f5aa30d..a8e570c 100644
---- a/mainwindow.cpp
-+++ b/mainwindow.cpp
-@@ -1,5 +1,6 @@
- #include "mainwindow.h"
- #include "navigation.h"
-+#include <clocale>
- #include <iostream>
- #include <fontconfig/fontconfig.h>
- #include <locale.h>
 diff --git a/meson.build b/meson.build
 index c419e83..be17a17 100644
 --- a/meson.build
