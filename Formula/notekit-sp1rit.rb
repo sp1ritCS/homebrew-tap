@@ -10,9 +10,9 @@ class NotekitSp1rit < Formula
     branch: "unimath"
 
   bottle do
-    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/notekit-sp1rit-0.0.1-20220418"
-    sha256 cellar: :any, big_sur:      "187e90e8a63d809c469fabcdb19580b92672322cf02a6ff6f2f877d85429a002"
-    sha256               x86_64_linux: "ed91bf86d35f8df71c59560c6db82aafabbdc6b431fd7c011c68c2cc244614bd"
+    root_url "https://github.com/sp1ritCS/homebrew-tap/releases/download/notekit-sp1rit-0.0.1-20220423"
+    sha256 cellar: :any, big_sur:      "69d7c61ecdfd846db9ad06394f260508ea5f7d88f05b5a4da7b1cad3a1260dcf"
+    sha256               x86_64_linux: "d28ed2be6c6af78e544a04596a6650d5d2881c55fdc7bbe012f87def45a79b21"
   end
 
   depends_on "meson" => :build
