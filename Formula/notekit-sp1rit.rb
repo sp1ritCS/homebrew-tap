@@ -1,11 +1,10 @@
 class NotekitSp1rit < Formula
-  commit = "5c9722e56898e3e00c18c7e919b3e6d44866b2c6"
+  commit = "b0d6847a4077a02b3f44bfc1afb467d134e2f05e"
 
   desc "GTK3 hierarchical markdown notetaking application with tablet support"
   homepage "https://github.com/blackhole89/notekit/"
-  url "https://github.com/sp1ritCS/notekit.git",
-    revision: commit
-  version "0.0.1-20220418"
+  url "https://github.com/sp1ritCS/notekit.git", { branch: "unimath", revision: commit }
+  version "0.0.1-20220423"
   license "GPL-3.0-or-later"
   head "https://github.com/sp1ritCS/notekit.git",
     branch: "unimath"
@@ -63,7 +62,7 @@ class NotekitSp1rit < Formula
   end
 
   test do
-    system "#{bin}/notekit", "--help" if ENV["DISPLAY"] || ENV["WAYLAND_DISPLAY"]
+    system "#{bin}/notekit", "--help" if OS.mac? || ENV["DISPLAY"] || ENV["WAYLAND_DISPLAY"]
     assert_predicate prefix/"NoteKit.app", :exist? if OS.mac?
   end
 end
