@@ -1,5 +1,5 @@
 class NotekitSp1rit < Formula
-  commit = "b0d6847a4077a02b3f44bfc1afb467d134e2f05e"
+  commit = "4b6a945772c1f3611149c86157b38ff97d350203"
 
   desc "GTK3 hierarchical markdown notetaking application with tablet support"
   homepage "https://github.com/blackhole89/notekit/"
