@@ -2,7 +2,7 @@ class Clatexmath < Formula
   desc "Dynamic, cross-platform, and embeddable LaTeX rendering library"
   homepage "https://github.com/NanoMichael/cLaTeXMath/"
   url "https://github.com/NanoMichael/cLaTeXMath.git",
-    revision: "3603a3c265a77c3ec64df3631cc9a5c90508ddd5"
+    revision: "e3199b8b80d58717440a506fc7523d9f01b49bd6"
   version "0.0.4"
   license "MIT"
   head "https://github.com/NanoMichael/cLaTeXMath.git"
@@ -21,6 +21,11 @@ class Clatexmath < Formula
   depends_on "gtkmm3"
   depends_on "gtksourceviewmm3"
   depends_on "tinyxml2"
+
+  patch do
+    url "https://gist.githubusercontent.com/sp1ritCS/14c0cc891918d58e1af00622f64ee08a/raw/3d0a71ac5c71ad5c9e547cf5ae44c438fa8de0d9/(clatexmath%2520homebrew)%25200001-fix-wierd-osx-issue-with-cxx17.patch"
+    sha256 "57d79685d0ed0e9c8b2630cf0a3e7e66a8b90cdd2232b691dabe3c7aa037b091"
+  end
 
   def install
     mkdir "_build" do
